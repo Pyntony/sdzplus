@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>My Test Extension Options</title>
+        <meta charset="utf8"/>
+        <link rel="stylesheet" type="text/css" href="options.css" />
+    </head>
+
+    <body>
+
+        <fieldset>
+            <legend>Restriction du contenu</legend>
+
+            <input type="checkbox" id="block_ads" />
+            <label for="block_ads">Bloquer la publicité</label>
+            <br />
+            <input type="checkbox" id="block_stats" />
+            <label for="block_stats">Bloquer les statistiques</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Étiquettes</legend>
+
+            <label for="label_blue">Gourou</label>
+            <input type="text" id="label_blue" />
+            <br />
+            <label for="label_orange">Guide</label>
+            <input type="text" id="label_orange" />
+            <br />
+            <label for="label_green">Initié</label>
+            <input type="text" id="label_green" />
+        </fieldset>
+
+        <fieldset>
+            <legend>Signature</legend>
+            <textarea cols="60" rows="3" maxlength="180" id="signature"></textarea>
+        </fieldset>
+
+        <div id="status"></div>
+        <button id="save">Save</button>
+
+    </body>
+
+    <script src="options.js"></script>
+
+</html>

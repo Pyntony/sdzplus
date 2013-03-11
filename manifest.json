@@ -1,0 +1,31 @@
+{
+    "name": "SDZ+",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Extension pour le Site du Zéro.",
+    "icons": {
+        "128": "sdzplus-128.png",
+        "48": "sdzplus-48.png",
+        "16": "sdzplus-16.png"
+    },
+
+    "permissions": ["tabs", "storage"],
+
+    "options_page": "options.html",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.siteduzero.com/*"],
+            "js": [
+                "jquery.min.js",
+                "labels.js",
+                "discard-ads.js",
+                "signature.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
